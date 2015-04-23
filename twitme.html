@@ -4,29 +4,27 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>TwitMe</title>
-	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="css/main.css">
+
 </head>
 <body>
 	<div class="container">
 
 		<header class="cabecera">
-			<h1>TwitMe</h1>
+			<img src="http://findicons.com/files/icons/830/twitter_characters/128/twitter_pirate_256.png" alt="TwitMe"><h1>TwitMe</h1>
 		</header>
 
 		<main>
 			<section>
 
 				<article>
-					<input id="titulo" type="text" placeholder="Lorem ipsum dolor sit amet">
+					<label for="titulo">Título</label>
+					<input id="titulo" type="text" class="desc-label">
 				</article>
 			
 				<article>
-					<textarea id="desc" placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum."></textarea>
+					<label for="desc">Descripción</label>
+					<textarea id="desc" class="escribe" rows="4"></textarea>
 				</article>
 
 				<article class="botonera">
@@ -36,10 +34,15 @@
 				
 			</section>
 
-			<section id="comentarios">
-				<article></article>
-				<article></article>
-				<article></article>
+			<section id="comentarios" class="feed">
+
+				<h2>Últimos comentarios</h2>
+
+				<article class="single-comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consequuntur omnis perferendis aliquam, autem assumenda ab necessitatibus voluptas aspernatur. In odit voluptas natus animi sapiente doloremque quidem nam ullam veniam.</article>
+				
+				<article class="single-comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, praesentium optio temporibus ullam error sint dolores asperiores minima quam ipsa, nam sit veritatis numquam doloribus consequatur officiis voluptates culpa vel sed labore illo pariatur reiciendis. Earum animi quae adipisci minus placeat molestiae fuga, possimus rem quod odit? Harum, ipsa, ipsum?</article>
+
+				<article class="single-comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt natus omnis quisquam enim maiores. Iure cum quas, est. Alias, quo.</article>
 			</section>
 		</main>
 
@@ -49,10 +52,8 @@
 
 	</main>
 	
-
-	<script>
-
-	</script>
+	<script src="js/Tweets.js" type="text/javascript"></script>
+	
 
 </body>
 </html>
