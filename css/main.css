@@ -78,12 +78,17 @@ section.feed{
 	margin:20px 0;
 }
 
-section.feed h2{
-	padding:10px;
-	text-align: center;
+
+
+.titulo-tweet {
+	color: gold;
+	text-decoration: underline;
+	text-transform: uppercase;
 }
 
-article.single-comment{
+
+
+.article.single-comment{
 	font-size:14px;
 	line-height: 1.6em;
 	padding:10px;

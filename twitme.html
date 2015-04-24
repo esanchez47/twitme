@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>TwitMe</title>
+	<title>TwitMe (Arrrrrrr!)</title>
 	<link rel="stylesheet" href="css/main.css">
 
 </head>
@@ -16,7 +16,8 @@
 
 		<main>
 			<section>
-
+				
+				<form>
 				<article>
 					<label for="titulo">Título</label>
 					<input id="titulo" type="text" class="desc-label">
@@ -28,22 +29,22 @@
 				</article>
 
 				<article class="botonera">
-					<button id="aceptar" onclick="">Aceptar</button>
-					<button id="cancelar" onclick="">Cancelar</button>
+					<button id="aceptar" onclick="Tweets.aceptar(event)">Aceptar</button>
+					<button id="cancelar" onclick="Tweets.cancelar(event)">Cancelar</button>
 				</article>
 				
+				</form>
+
 			</section>
+			
+			<h2>Últimos comentarios</h2>
 
 			<section id="comentarios" class="feed">
 
-				<h2>Últimos comentarios</h2>
-
-				<article class="single-comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consequuntur omnis perferendis aliquam, autem assumenda ab necessitatibus voluptas aspernatur. In odit voluptas natus animi sapiente doloremque quidem nam ullam veniam.</article>
 				
-				<article class="single-comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, praesentium optio temporibus ullam error sint dolores asperiores minima quam ipsa, nam sit veritatis numquam doloribus consequatur officiis voluptates culpa vel sed labore illo pariatur reiciendis. Earum animi quae adipisci minus placeat molestiae fuga, possimus rem quod odit? Harum, ipsa, ipsum?</article>
-
-				<article class="single-comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt natus omnis quisquam enim maiores. Iure cum quas, est. Alias, quo.</article>
 			</section>
+
+
 		</main>
 
 		<footer>
