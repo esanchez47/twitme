@@ -22,9 +22,9 @@ el metodo imprmir. Los metodos de clase no son accesibles
 por las instancias */
 
 
-Tweets.twits = []; // creado arreglo vacio.
+Tweets.twits = []; // creado arreglo vacio. // ATRIBUTO DE CLASE
 
-// aceptar va a agregar un nuevo tweet
+// aceptar va a agregar un nuevo tweet // ESTO ES UN METODO DE CLASE
 Tweets.aceptar = function(e){
 	e.preventDefault(); // previene el submit // debe tener el nombre del parametro, en este caso, e.
 	var titulo = document.getElementById('titulo').value; // obtener segun ID HTML
@@ -36,6 +36,7 @@ Tweets.aceptar = function(e){
 	// console.log(Tweets.twits);
 	Tweets.cancelar(e);
 	Tweets.mostrar();
+	Tweets.guardar();
 }
 
 // limpia los datos del formulario 
@@ -50,8 +51,9 @@ Tweets.cancelar = function(e){ // hace referencia a la clase que se puso en el o
 
 }
 
+// muestra tweets
 Tweets.mostrar = function(){
-	var comentarios = ''; // se van concatenando strings, por eso es vacio
+	var comentarios = ''; // se van concatenando strings, por eso es vacio // LA VARIABLE DEBE DECLARARSE ANTES QUE LA FUNCION
 	Tweets.twits.map(function(elemento, indice){ // .map itera elementos, 
 		
 
@@ -66,8 +68,19 @@ Tweets.mostrar = function(){
 	document.getElementById('comentarios').innerHTML = comentarios;
 }
 
+// para guardar, que no se pierdan los tweets al actualizar
+Tweets.guardar = function(){
+	var twits = Tweets.twits; 
+	var twitsEncode = JSON.stringify(twits); // se transforma en un string
+	localStorage.setItem('twits', twitsEncode); // quedan guardados los tweets enviados
+}
+
+Tweets.obtenerTweets = function(){
+	var twitsEncoded = localStorage.getItem('twits');
+	var twits = JSON.parse(twitsEncoded);
+	Tweets.twits = twits;
+}
 
 
-// <article class="single-comment"><h4>titulo</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consequuntur omnis perferendis aliquam, autem assumenda ab necessitatibus voluptas aspernatur. In odit voluptas natus animi sapiente doloremque quidem nam ullam veniam.</p></article>
-
-
+Tweets.obtenerTweets();
+Tweets.mostrar();
